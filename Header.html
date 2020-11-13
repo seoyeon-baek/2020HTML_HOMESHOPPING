@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Header</title>
+    <style>
+
+        *{margin:0px; padding:0px; border:none;}
+        ul{list-style: none;} /*리스트 앞 제거*/
+        a{text-decoration: none;} /*링크 밑줄 제거*/
+    #logo{
+        position: absolute;
+        top: 15%;
+        width:100%;
+        text-align: center;
+    }
+
+    #top_menu{
+        position: absolute;
+        top: 6%;
+        right: 20px;
+        font-size:14px;
+        text-decoration: none;
+        color: black;
+        
+    }
+    nav{
+        position: absolute;
+        text-align: center;
+        bottom:9%;
+        margin: 0 auto;
+        width:100%;
+        font-size:12px;
+    }
+
+    nav li{
+        display: inline;
+        margin-left: 30px;
+    }
+    #page{width:820px; margin:0px, auto;}
+
+    nav li a{color:black;}
+
+    #content li{
+        display:inline;
+        margin-left:50px;
+    }
+    A:visited{text-decoration:none; color:black;}
+    </style>
+</head>
+
+<body link="black" vlink="black" alink="blacks">
+   <div id="page">
+
+        <header>
+            <div id="logo">
+                <a href="Main.html" target="Main">
+                <img src="img/banner.jpg"  alt="Logo">
+            </div>
+            <div id="top_menu">
+                <a href="Main.html" target="Main">HOME |</a>
+                <a href="javascript:alert('아직 지원하지 않는 페이지입니다.')">NOTICE |</a>
+                <a href="Login.html" target="Main">LOGIN |</a>
+                <a href="javascript:alert('아직 지원하지 않는 페이지입니다.')">JOIN</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Top.html" target="Main">TOP</a></li>
+                    <li><a href="Outer.html" target="Main">OUTER</a></li>
+                    <li><a href="Pants.html" target="Main">PANTS</a></li>
+                    <li><a href="Dress.html" target="Main">DRESS</a></li>
+                    <li><a href="javascript:alert('아직 지원하지 않는 페이지입니다.')">SHOES/ACC</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    </body>
+</html>

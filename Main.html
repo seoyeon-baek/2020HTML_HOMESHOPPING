@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>Main</title>
+
+	<style>
+		
+	* {margin:0;padding:0;}
+	.section input[id*="slide"] {display:none;}
+	.section .slidewrap {max-width:1500px;margin:0 auto;position:relative;}
+	.section .slidelist {white-space:nowrap;font-size:0;overflow:hidden;position:relative;}
+	.section .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .5s;}
+	.section .slidelist > li > a {display:block;}
+	.section .slidelist > li > a img {width:100%;}
+	.section .slidelist label {position:absolute;z-index:10;top:50%;transform:translateY(-50%);padding:35px;cursor:pointer;}
+		
+	/* input에 체크되면 슬라이드 효과 */
+	.section input[id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+	.section input[id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+	.section input[id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+
+	/* 좌,우 슬라이드 버튼 */
+	.slide-control > div {display:none;}
+	.section .left {left:30px;background:url('./img/left.png') center center / 100% no-repeat;}
+	.section .right {right:30px;background:url('./img/right.png') center center / 100% no-repeat;}
+	.section input[id="slide01"]:checked ~ .slidewrap .slide-control > div:nth-child(1) {display:block;}
+	.section input[id="slide02"]:checked ~ .slidewrap .slide-control > div:nth-child(2) {display:block;}
+	.section input[id="slide03"]:checked ~ .slidewrap .slide-control > div:nth-child(3) {display:block;}
+
+	/* 페이징 */
+   
+	.slide-pagelist {padding:10px; width:100%;}  
+	.slide-pagelist > li {display:inline-block;vertical-align:middle;}
+	.slide-pagelist > li > label {display:block;padding:4px 4px;border-radius:5px;background:#ccc;margin:5px 10px;cursor:pointer;}
+	.section input[id="slide01"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(1) > label {background:#999;}
+	.section input[id="slide02"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(2) > label {background:#999;}
+	.section input[id="slide03"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(3) > label {background:#999;}
+    
+    #period{
+        position:absolute;
+        left:50%;
+        transform:translate(-50%,-50%);
+        bottom:-15px;
+    }
+   
+	</style>
+	<link rel="stylesheet" href="./css/Main.css">
+</head>
+<body>
+
+<div class="section">
+	<input type="radio" name="slide" id="slide01" checked>
+	<input type="radio" name="slide" id="slide02">
+	<input type="radio" name="slide" id="slide03">
+	<div class="slidewrap">
+		
+		<ul class="slidelist">
+			<!-- 슬라이드 영역 -->
+			<li class="slideitem">
+				<a>
+					<div class="textbox">
+					</div>
+					<img src="img/main_pc_46.gif">
+				</a>
+			</li>
+			<li class="slideitem">
+				<a>
+					
+					<div class="textbox">
+					</div>
+					<img src="img/main.JPG">
+				</a>
+			</li>
+			<li class="slideitem">
+				<a>
+					
+					<div class="textbox">
+					</div>
+					<img src="img/main2.jpg">
+				</a>
+			</li class="slideitem">
+
+			<!-- 좌,우 슬라이드 버튼 -->
+			<div class="slide-control">
+				<div>
+					<label for="slide03" class="left"></label>
+					<label for="slide02" class="right"></label>
+				</div>
+				<div>
+					<label for="slide01" class="left"></label>
+					<label for="slide03" class="right"></label>
+				</div>
+				<div>
+					<label for="slide02" class="left"></label>
+					<label for="slide01" class="right"></label>
+				</div>
+            </div>
+
+		</ul>
+        <!-- 페이징 -->
+        <div id="period">
+		<ul class="slide-pagelist">
+			<li><label for="slide01"></label></li>
+			<li><label for="slide02"></label></li>
+			<li><label for="slide03"></label></li>
+        </ul>
+        </div>
+	</div>
+</div>
+<div class="contents shopping">
+	<ul class="clearfix">
+		<li>
+			<a href="">
+				<img src="./img/jacket.webp" alt="">
+			</a>
+			<div>
+				<p class="title">[천장돌파!,센스 반크롭 후드 봄,가을 청자켓 아우터</p>
+				<p class="desc">#큰모자 #실물파</p>
+				<p class="price">45,000WON</p>
+			</div>
+		</li>
+		<li>
+			<a href="">
+				<img src="./img/outer.webp" alt="">
+			</a>
+			<div>
+				<p class="title">[베스트재입고/굿퀄리티-] 꿈에 나오는 가을 꽈배기<br/> 반크롭 니트 가디건</p>
+				<p class="desc">#사랑스러운핏 #굿원단 #소장추천</p>
+				<p class="price">38,000WON</p>
+			</div>
+		</li>
+		<li>
+			<a href="">
+				<img src="./img/hood.webp" alt="">
+			</a>
+			<div>
+				<p class="title">[남녀공용/양기모] 윈디 루즈핏 후드티 ; 3Color</p>
+				<p class="desc">#딱 예쁜 루즈핏 #고퀄리티 양기모</p>
+				<p class="price">28,500WON</p>
+			</div>
+		</li>
+		<li>
+			<a href="">
+				<img src="./img/one.webp" alt="">
+			</a>
+			<div>
+				<p class="title">인어 라인 맨투맨 긴팔 원피스</p>
+				<p class="desc">박시한 핏감으로 보호본능을 자극시키는 민감한<br/> 피부도 편안하게 착용 가능한 소프트한 원단 원피스.</p>
+				<p class="price">19,000WON</p>
+			</div>
+		</li>
+		<li>
+			<a href="">
+				<img src="./img/pants.webp" alt="">
+			</a>
+			<div>
+				<p class="title">클린 슬림핏 데님 일자바지,청바지</p>
+				<p class="desc">#컬러감이 독보적 #다이어트 효과</p>
+				<p class="price">28,000WON</p>
+			</div>
+		</li>
+		<li>
+			<a href="">
+				<img src="./img/skirt.webp" alt="">
+			</a>
+			<div>
+				<p class="title">[문의폭주!] 라인 골지 니트 스커트</p>
+				<p class="desc">#하체 커버 가능 #4계절템</p>
+				<p class="price">15,000WON</p>
+			</div>
+		</li>
+		<li>
+			<a href="">
+				<img src="./img/shoes.webp" alt="">
+			</a>
+			<div>
+				<p class="title">디자인 깡패 데일리 캔버스 , 스니커즈 (운동화)</p>
+				<p class="desc">#골덴 소재로 신발끈과 신발 앞 부분의  <br/> 배색이 자연스럽고 포인트 되어서 예쁜 <br/>따뜻하고 튼튼한 캔버스 운동화~!</p>
+				<p class="price">27,000WON</p>
+			</div>
+		</li>
+		<li>
+			<a href="">
+				<img src="./img/belt.webp" alt="">
+			</a>
+			<div>
+				<p class="title">[ 추천 ] 심플 가죽 벨트</p>
+				<p class="desc">싼티 나지 않는 디자인 , 딱 좋은 굵기</p>
+				<p class="price">10,000WON</p>
+			</div>
+		</li>
+	</ul>
+<div>
+</body>
+</html>
